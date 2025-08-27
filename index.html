@@ -125,18 +125,21 @@
         /* --- Mobil Cihazlar için Düzenleme --- */
         @media (max-width: 768px) {
             .menu-kapsayici {
-                flex-direction: column; /* Öğeleri alt alta sırala */
-                width: 95%; /* Genişliği artır */
-                gap: 0; /* Boşlukları sıfırla */
+                flex-direction: column;
+                width: 95%;
+                gap: 0;
             }
 
             .yan-kutu, .kutu2 {
-                width: 100%; /* Her iki kutuyu da tam genişlik yap */
+                width: 100%;
+            }
+
+            .kutu2 {
+                order: -1; /* Menü kutusunu en üste al */
             }
 
             .yan-kutu {
-                order: -1; /* Yan kutuyu menüden önce göster */
-                margin-bottom: 20px; /* Alttaki menüden boşluk bırak */
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -273,4 +276,3 @@
     
 </body>
 </html>
-bu kodu telefonlarda da en iyi görünsün diye nasıl düzenleyeceğiz
