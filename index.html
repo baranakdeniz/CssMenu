@@ -121,10 +121,27 @@
             background-color: #F0F8FF;
             padding-left: 5px;
         }
+        
+        /* --- Mobil Cihazlar için Düzenleme --- */
+        @media (max-width: 768px) {
+            .menu-kapsayici {
+                flex-direction: column; /* Öğeleri alt alta sırala */
+                width: 95%; /* Genişliği artır */
+                gap: 0; /* Boşlukları sıfırla */
+            }
+
+            .yan-kutu, .kutu2 {
+                width: 100%; /* Her iki kutuyu da tam genişlik yap */
+            }
+
+            .yan-kutu {
+                order: -1; /* Yan kutuyu menüden önce göster */
+                margin-bottom: 20px; /* Alttaki menüden boşluk bırak */
+            }
+        }
     </style>
 </head>
 <body>
-
     <div class="kutu1">
         <h1>Begonvil Kahvaltı Evi & Kafe</h1> 
     </div>
@@ -208,11 +225,11 @@
 
             <h2 style="margin-top: 20px;">İçecekler</h2>
             <ul class="yiyecek-listesi">
-                <li><span class="urun-adi">Çay</span> <span class="urun-fiyat">60 TL</span></li>
+                <li><span class="urun-adi">Çay</span> <span class="urun-fiyat">40 TL</span></li>
                 <li><span class="urun-adi">Bitki Çayı</span> <span class="urun-fiyat">100 TL</span></li>
                 <li><span class="urun-adi">Nescafe Gold</span> <span class="urun-fiyat">70 TL</span></li>
                 <li><span class="urun-adi">Türk Kahvesi</span> <span class="urun-fiyat">110 TL</span></li>
-                <li><span class="urun-adi">Latte</span> <span class="urun-fiyat">190 TL</span></li>
+                <li><span class="urun-adi">Latte</span> <span class="urun-fiyat">170 TL</span></li>
                 <li><span class="urun-adi">Cappuccino</span> <span class="urun-fiyat">150 TL</span></li>
                 <li><span class="urun-adi">Americano</span> <span class="urun-fiyat">150 TL</span></li>
                 <li><span class="urun-adi">Filtre Kahve</span> <span class="urun-fiyat">150 TL</span></li>
@@ -220,10 +237,10 @@
                 <li><span class="urun-adi">Sade Soda</span> <span class="urun-fiyat">50 TL</span></li>
                 <li><span class="urun-adi">Meyveli Soda</span> <span class="urun-fiyat">60 TL</span></li>
                 <li><span class="urun-adi">Limonata</span> <span class="urun-fiyat">120 TL</span></li>
-                <li><span class="urun-adi">Taze Portakal Suyu</span> <span class="urun-fiyat">180 TL</span></li>
+                <li><span class="urun-adi">Taze Portakal Suyu</span> <span class="urun-fiyat">280 TL</span></li>
                 <li><span class="urun-adi">Şalgam</span> <span class="urun-fiyat">50 TL</span></li>
                 <li><span class="urun-adi">Ayran</span> <span class="urun-fiyat">40 TL</span></li>
-                <li><span class="urun-adi">Dondurma</span> <span class="urun-fiyat">40 TL - 100 TL</span></li>
+                <li><span class="urun-adi">Dondurma</span> <span class="urun-fiyat">40 TL</span></li>
             </ul>
 
             <h2 style="margin-top: 20px;">Tatlılar</h2>
@@ -256,3 +273,4 @@
     
 </body>
 </html>
+bu kodu telefonlarda da en iyi görünsün diye nasıl düzenleyeceğiz
