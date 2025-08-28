@@ -125,18 +125,19 @@
             background-color: #F0F8FF;
             padding-left: 5px;
         }
-        @media (max-width: 768px) {
+       @media (max-width: 768px) {
     .menu-kapsayici {
-        flex-wrap: wrap;
-        gap: 15px;
+        flex-wrap: nowrap;
         width: 95%;
+        overflow-x: auto;
     }
     .yan-kutu {
-        width: 35%;
+        width: 30%;
+        min-width: 150px;
     }
     .kutu2 {
-        width: 100%;
-        margin-top: 20px;
+        width: 40%;
+        min-width: 200px;
     }
 }
     </style>
@@ -269,4 +270,5 @@
     
 </body>
 </html>
+
 
