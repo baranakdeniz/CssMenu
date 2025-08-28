@@ -125,19 +125,22 @@
             background-color: #F0F8FF;
             padding-left: 5px;
         }
-       @media (max-width: 768px) {
+      @media (max-width: 768px) {
     .menu-kapsayici {
         flex-wrap: nowrap;
         width: 95%;
-        overflow-x: auto;
+        overflow-x: auto; /* Kaydırma isterseniz auto, istemezseniz hidden yapabilirsiniz */
+        box-sizing: border-box;
     }
     .yan-kutu {
-        width: 30%;
-        min-width: 150px;
+        width: 28%;
+        min-width: 140px;
+        box-sizing: border-box;
     }
     .kutu2 {
-        width: 40%;
-        min-width: 200px;
+        width: 42%;
+        min-width: 180px;
+        box-sizing: border-box;
     }
 }
     </style>
@@ -270,5 +273,6 @@
     
 </body>
 </html>
+
 
 
