@@ -31,7 +31,7 @@
         .kutu1 h1 {
             font-size: 2.5rem;
             margin: 0;
-            font-family:'Bilbo Swash Caps', cursive;
+            font-family: 'Bilbo Swash Caps', cursive;
         }
 
         /* Ana Menü Kapsayıcısı */
@@ -110,7 +110,10 @@
             font-weight: bold;
             color: #444;
             order: 0;
+            /* İlk seçenek: Playfair Display */
             font-family: 'Playfair Display', serif;
+            /* İkinci seçeneği denemek için aşağıdaki satırdaki yorum işaretlerini kaldırın: */
+            /* font-family: 'Lora', serif; */
         }
 
         /* Ürün Fiyatı */
@@ -122,27 +125,10 @@
             background-color: #F0F8FF;
             padding-left: 5px;
         }
-        
-        /* --- Mobil Cihazlar için Düzenleme --- */
-        @media (max-width: 768px) {
-            .menu-kapsayici {
-                flex-direction: column; /* Öğeleri alt alta sırala */
-                width: 95%; /* Genişliği artır */
-                gap: 0; /* Boşlukları sıfırla */
-            }
-
-            .yan-kutu, .kutu2 {
-                width: 100%; /* Her iki kutuyu da tam genişlik yap */
-            }
-
-            .yan-kutu {
-                order: -1; /* Yan kutuyu menüden önce göster */
-                margin-bottom: 20px; /* Alttaki menüden boşluk bırak */
-            }
-        }
     </style>
 </head>
 <body>
+
     <div class="kutu1">
         <h1>Begonvil Kahvaltı Evi & Kafe</h1> 
     </div>
@@ -173,20 +159,13 @@
                 <li><span class="urun-adi">Serpme Kahvaltı</span> <span class="urun-fiyat">450 TL</span></li>
                 <li><span class="urun-adi">Kahvaltı Tabağı</span> <span class="urun-fiyat">350 TL</span></li>
                 <li><span class="urun-adi">Simit Poğaça</span> <span class="urun-fiyat">30 TL</span></li>
-                <li><span class="urun-adi">Söğüş (Kişibaşı)</span> <span class="urun-fiyat">150 TL</span></li>
-                <li><span class="urun-adi">Peynir Tabağı (Kişibaşı)</span> <span class="urun-fiyat">250 TL</span></li>
                 <li><span class="urun-adi">Menemen</span> <span class="urun-fiyat">300 TL</span></li>
                 <li><span class="urun-adi">Mıhlama</span> <span class="urun-fiyat">350 TL</span></li>
                 <li><span class="urun-adi">Kaşarlı Tost</span> <span class="urun-fiyat">120 TL</span></li>
-                <li><span class="urun-adi">Beyaz Peynirli Tost</span> <span class="urun-fiyat">200 TL</span></li>
-                <li><span class="urun-adi">Karışık Tost</span> <span class="urun-fiyat">250 TL</span></li>
-                <li><span class="urun-adi">Patatesli Gözleme</span> <span class="urun-fiyat">220 TL</span></li>
-                <li><span class="urun-adi">Peynirli Gözleme</span> <span class="urun-fiyat">220 TL</span></li>
-                <li><span class="urun-adi">Sucuklu Gözleme</span> <span class="urun-fiyat">300 TL</span></li>
+                <li><span class="urun-adi">Karışık Tost</span> <span class="urun-fiyat">220 TL</span></li>
                 <li><span class="urun-adi">Omlet</span> <span class="urun-fiyat">180 TL</span></li>
                 <li><span class="urun-adi">Sucuklu Yumurta</span> <span class="urun-fiyat">300 TL</span></li>
                 <li><span class="urun-adi">Kavurmalı Yumurta</span> <span class="urun-fiyat">400 TL</span></li>
-                <li><span class="urun-adi">Cacık</span> <span class="urun-fiyat">150 TL</span></li>
             </ul>
 
             <h2 style="margin-top: 20px;">Salatalar</h2>
@@ -206,14 +185,12 @@
                 <li><span class="urun-adi">Izgara Köfte</span> <span class="urun-fiyat">450 TL</span></li>
                 <li><span class="urun-adi">Sucuk Izgara</span> <span class="urun-fiyat">350 TL</span></li>
                 <li><span class="urun-adi">Somon Izgara</span> <span class="urun-fiyat">700 TL</span></li>
-                <li><span class="urun-adi">Izgara Tavuk</span> <span class="urun-fiyat">400 TL</span></li>
                 <li><span class="urun-adi">Somon</span> <span class="urun-fiyat">750 TL</span></li>
                 <li><span class="urun-adi">Kalamar</span> <span class="urun-fiyat">800 TL</span></li>
                 <li><span class="urun-adi">Levrek</span> <span class="urun-fiyat">700 TL</span></li>
                 <li><span class="urun-adi">Tereyağında Karides</span> <span class="urun-fiyat">800 TL</span></li>
                 <li><span class="urun-adi">Çoban Kavurma</span> <span class="urun-fiyat">650 TL</span></li>
                 <li><span class="urun-adi">Kremalı Tavuklu Makarna</span> <span class="urun-fiyat">350 TL</span></li>
-                <li><span class="urun-adi">Çıtır Tavuk Pane</span> <span class="urun-fiyat">390 TL</span></li>
                 <li><span class="urun-adi">Patates Tava</span> <span class="urun-fiyat">180 TL</span></li>
                 <li><span class="urun-adi">Kalem Börek</span> <span class="urun-fiyat">200 TL</span></li>
                 <li><span class="urun-adi">Paçanga Böreği</span> <span class="urun-fiyat">200 TL</span></li>
@@ -223,6 +200,9 @@
                 <li><span class="urun-adi">Tavuk Dürüm</span> <span class="urun-fiyat">300 TL</span></li>
                 <li><span class="urun-adi">Çiğköfte Tabağı</span> <span class="urun-fiyat">300 TL</span></li>
                 <li><span class="urun-adi">Begonvil Tabağı</span> <span class="urun-fiyat">380 TL</span></li>
+                <li><span class="urun-adi">Söğüş(Kişibaşı)</span> <span class="urun-fiyat">150 TL</span></li>
+                <li><span class="urun-adi">Peynir Tabağı(Kişibaşı)</span> <span class="urun-fiyat">250 TL</span></li>
+                <li><span class="urun-adi">Cacık</span> <span class="urun-fiyat">150 TL</span></li>
             </ul>
 
             <h2 style="margin-top: 20px;">İçecekler</h2>
