@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Begonvil</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
     <style>
         /* Genel Sayfa Ayarları */
+        html {
+            scroll-behavior: smooth; /* Butonlara tıklayınca yumuşak kaydırma efekti */
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -34,30 +37,35 @@
             font-family: 'Bilbo Swash Caps', cursive;
         }
 
-        /* Menü Butonları */
-        .menu-buttons {
+        /* Menü Butonları Alanı */
+        .menu-butonlari {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 15px;
-            margin: 15px 0 30px 0;
-            flex-wrap: wrap; /* Küçük ekranlarda alt satıra geçer */
+            margin: 20px auto;
+            width: 80%;
+            flex-wrap: wrap;
         }
 
-        .menu-buttons button {
-            background-color: #FFC0CB; /* Pembe */
-            border: none;
-            color: white;
-            padding: 10px 18px;
-            font-size: 1rem;
-            font-weight: bold;
+        /* Menü Butonları Stili */
+        .menu-butonlari a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #FFC0CB;
+            padding: 10px 20px;
             border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            font-family: 'Bilbo Swash Caps', cursive;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            font-family: 'Lora', serif;
         }
 
-        .menu-buttons button:hover {
-            background-color: #ff8fb3;
+        .menu-butonlari a:hover {
+            background-color: #e097a8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         /* Ana Menü Kapsayıcısı */
@@ -83,7 +91,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-
+        
         /* Menülerin Ana Kutusu */
         .kutu2 {
             background-color: #F0F8FF;
@@ -148,6 +156,24 @@
             background-color: #F0F8FF;
             padding-left: 5px;
         }
+        
+        /* --- Mobil Cihazlar için Düzenleme --- */
+        @media (max-width: 768px) {
+            .menu-kapsayici {
+                flex-direction: column; /* Öğeleri alt alta sırala */
+                width: 95%; /* Genişliği artır */
+                gap: 0; /* Boşlukları sıfırla */
+            }
+
+            .yan-kutu, .kutu2 {
+                width: 100%; /* Her iki kutuyu da tam genişlik yap */
+            }
+
+            .yan-kutu {
+                order: -1; /* Yan kutuyu menüden önce göster */
+                margin-bottom: 20px; /* Alttaki menüden boşluk bırak */
+            }
+        }
     </style>
 </head>
 <body>
@@ -156,19 +182,17 @@
         <h1>Begonvil Kahvaltı Evi & Kafe</h1> 
     </div>
 
-    <!-- Menü Butonları -->
-    <div class="menu-buttons">
-        <button onclick="scrollToSection('kahvaltilar')">Kahvaltılar</button>
-        <button onclick="scrollToSection('salatalar')">Salatalar</button>
-        <button onclick="scrollToSection('yemekler')">Yemekler</button>
-        <button onclick="scrollToSection('icecekler')">İçecekler</button>
-        <button onclick="scrollToSection('tatlilar')">Tatlılar</button>
+    <div class="menu-butonlari">
+        <a href="#kahvaltilar">Kahvaltılar</a>
+        <a href="#salatalar">Salatalar</a>
+        <a href="#yemekler">Yemekler</a>
+        <a href="#icecekler">İçecekler</a>
+        <a href="#tatlilar">Tatlılar</a>
     </div>
 
     <div class="menu-kapsayici"> 
 
         <div class="yan-kutu">
-            <!-- Resimler orijinal koddan -->
             <img src="menu6-large.jpg" alt="Kahvalti">
             <img src="hamburger.jpg" alt="Hamburger">
             <img src="kasarlisucuklutost.jpg" alt="Tost">
@@ -182,7 +206,8 @@
             <img src="hazir-manti.jpg" alt="Manti">
             <img src="kabaktatlısı.jpeg" alt="tatlı">
             <img src="irmik.jpeg" alt="tatlı">
-            <!-- Diğer resimler devam eder -->
+            <img src="tercih.jpg" alt="mesaj">
+            <img src="AfiyetOlsun.jpg" alt="mesaj">
         </div>
 
         <div class="kutu2">
@@ -191,6 +216,9 @@
                 <li><span class="urun-adi">Serpme Kahvaltı</span> <span class="urun-fiyat">450 TL</span></li>
                 <li><span class="urun-adi">Kahvaltı Tabağı</span> <span class="urun-fiyat">350 TL</span></li>
                 <li><span class="urun-adi">Simit Poğaça</span> <span class="urun-fiyat">30 TL</span></li>
+                <li><span class="urun-adi">Söğüş (Kişibaşı)</span> <span class="urun-fiyat">150 TL</span></li>
+                <li><span class="urun-adi">Peynir Tabağı (Kişibaşı)</span> <span class="urun-fiyat">250 TL</span></li>
+                <li><span class="urun-adi">Cacık</span> <span class="urun-fiyat">150 TL</span></li>
                 <li><span class="urun-adi">Menemen</span> <span class="urun-fiyat">300 TL</span></li>
                 <li><span class="urun-adi">Mıhlama</span> <span class="urun-fiyat">350 TL</span></li>
                 <li><span class="urun-adi">Kaşarlı Tost</span> <span class="urun-fiyat">120 TL</span></li>
@@ -223,6 +251,7 @@
                 <li><span class="urun-adi">Tereyağında Karides</span> <span class="urun-fiyat">800 TL</span></li>
                 <li><span class="urun-adi">Çoban Kavurma</span> <span class="urun-fiyat">650 TL</span></li>
                 <li><span class="urun-adi">Kremalı Tavuklu Makarna</span> <span class="urun-fiyat">350 TL</span></li>
+                <li><span class="urun-adi">Çıtır Tavuk Pane</span> <span class="urun-fiyat">390 TL</span></li>
                 <li><span class="urun-adi">Patates Tava</span> <span class="urun-fiyat">180 TL</span></li>
                 <li><span class="urun-adi">Kalem Börek</span> <span class="urun-fiyat">200 TL</span></li>
                 <li><span class="urun-adi">Paçanga Böreği</span> <span class="urun-fiyat">200 TL</span></li>
@@ -232,9 +261,6 @@
                 <li><span class="urun-adi">Tavuk Dürüm</span> <span class="urun-fiyat">300 TL</span></li>
                 <li><span class="urun-adi">Çiğköfte Tabağı</span> <span class="urun-fiyat">300 TL</span></li>
                 <li><span class="urun-adi">Begonvil Tabağı</span> <span class="urun-fiyat">380 TL</span></li>
-                <li><span class="urun-adi">Söğüş(Kişibaşı)</span> <span class="urun-fiyat">150 TL</span></li>
-                <li><span class="urun-adi">Peynir Tabağı(Kişibaşı)</span> <span class="urun-fiyat">250 TL</span></li>
-                <li><span class="urun-adi">Cacık</span> <span class="urun-fiyat">150 TL</span></li>
             </ul>
 
             <h2 id="icecekler" style="margin-top: 20px;">İçecekler</h2>
@@ -279,17 +305,11 @@
             <img src="sufle.jpeg" alt="tatlı">
             <img src="kunefe.jpg" alt="tatlı">
             <img src="dondurma.jpeg" alt="tatlı">
-            <!-- Diğer resimler devam eder -->
+            <img src="cheescake.jpeg" alt="tatlı">
+            <img src="tercih.jpg" alt="mesaj">
+            <img src="AfiyetOlsun.jpg" alt="mesaj">
         </div>
     </div>
-
-   <script>
-    function scrollToSection(id) {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-</script>
+    
 </body>
 </html>
