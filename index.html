@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Begonvil</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
     <style>
         /* Genel Sayfa Ayarları */
         body {
@@ -83,7 +83,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        
+
         /* Menülerin Ana Kutusu */
         .kutu2 {
             background-color: #F0F8FF;
@@ -136,10 +136,7 @@
             font-weight: bold;
             color: #444;
             order: 0;
-            /* İlk seçenek: Playfair Display */
             font-family: 'Playfair Display', serif;
-            /* İkinci seçeneği denemek için aşağıdaki satırdaki yorum işaretlerini kaldırın: */
-            /* font-family: 'Lora', serif; */
         }
 
         /* Ürün Fiyatı */
@@ -171,6 +168,7 @@
     <div class="menu-kapsayici"> 
 
         <div class="yan-kutu">
+            <!-- Resimler orijinal koddan -->
             <img src="menu6-large.jpg" alt="Kahvalti">
             <img src="hamburger.jpg" alt="Hamburger">
             <img src="kasarlisucuklutost.jpg" alt="Tost">
@@ -184,7 +182,7 @@
             <img src="hazir-manti.jpg" alt="Manti">
             <img src="kabaktatlısı.jpeg" alt="tatlı">
             <img src="irmik.jpeg" alt="tatlı">
-            <!-- Diğer resimler orijinal kodda olduğu gibi devam eder -->
+            <!-- Diğer resimler devam eder -->
         </div>
 
         <div class="kutu2">
@@ -281,3 +279,12 @@
             <img src="sufle.jpeg" alt="tatlı">
             <img src="kunefe.jpg" alt="tatlı">
             <img src="dondurma.jpeg" alt="tatlı">
+            <!-- Diğer resimler devam eder -->
+        </div>
+    </div>
+
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior
