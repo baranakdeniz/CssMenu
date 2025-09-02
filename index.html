@@ -44,8 +44,8 @@
             align-items: center;
             gap: 15px;
             margin: 20px auto;
-            width: 80%;
-            flex-wrap: wrap;
+            width: 80%; /* Menü kapsayıcısı ile aynı genişlikte olması için */
+            flex-wrap: wrap; /* Küçük ekranlarda alt alta geçmesini sağlar */
         }
 
         /* Menü Butonları Stili */
@@ -60,6 +60,7 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             font-family: 'Lora', serif;
+            white-space: nowrap; /* Buton metninin tek satırda kalmasını sağlar */
         }
 
         .menu-butonlari a:hover {
@@ -72,7 +73,7 @@
         .menu-kapsayici {
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: flex-start; /* Öğelerin üstten hizalanmasını sağlar */
             gap: 20px;
             margin: 20px auto;
             width: 80%;
@@ -80,7 +81,7 @@
 
         /* Resimlerin bulunduğu yan kutular */
         .yan-kutu {
-            width: 20%;
+            width: 20%; /* Toplamda %40 + %55 = %95, boşluklar için pay kalır */
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -95,7 +96,7 @@
         /* Menülerin Ana Kutusu */
         .kutu2 {
             background-color: #F0F8FF;
-            width: 60%;
+            width: 55%; 
             padding: 20px;
             box-sizing: border-box;
             border-radius: 10px;
@@ -165,13 +166,20 @@
                 gap: 0; /* Boşlukları sıfırla */
             }
 
-            .yan-kutu, .kutu2 {
-                width: 100%; /* Her iki kutuyu da tam genişlik yap */
+            .yan-kutu, .kutu2 { /* Her iki yan kutu ve menü kutusu tam genişlikte */
+                width: 100%; 
+                margin-bottom: 20px; /* Alttaki menüden boşluk bırak */
             }
 
-            .yan-kutu {
-                order: -1; /* Yan kutuyu menüden önce göster */
-                margin-bottom: 20px; /* Alttaki menüden boşluk bırak */
+            /* Mobil sıralama: Sol yan kutu, sonra menü, sonra sağ yan kutu */
+            .yan-kutu:nth-of-type(1) { /* Sol yan kutu */
+                order: -1; 
+            }
+            .kutu2 { /* Menü kutusu */
+                order: 0; 
+            }
+            .yan-kutu:nth-of-type(2) { /* Sağ yan kutu */
+                order: 1; 
             }
         }
     </style>
@@ -191,23 +199,15 @@
     </div>
 
     <div class="menu-kapsayici"> 
-
         <div class="yan-kutu">
             <img src="menu6-large.jpg" alt="Kahvalti">
-            <img src="hamburger.jpg" alt="Hamburger">
             <img src="kasarlisucuklutost.jpg" alt="Tost">
-            <img src="kalamar-tava-w1600.jpg" alt="Kalamar">
             <img src="karides.jpeg" alt="Karides">
-            <img src="levrek.jpeg" alt="levrek">
             <img src="cigkofteciahmetaybak-1.jpg" alt="cigkofte">
-            <img src="kurtborek.jpg" alt="Borek">
             <img src="omlet.jpeg" alt="omlet">
-            <img src="menemen.jpeg" alt="Menemen">
             <img src="hazir-manti.jpg" alt="Manti">
-            <img src="kabaktatlısı.jpeg" alt="tatlı">
             <img src="irmik.jpeg" alt="tatlı">
             <img src="tercih.jpg" alt="mesaj">
-            <img src="AfiyetOlsun.jpg" alt="mesaj">
         </div>
 
         <div class="kutu2">
@@ -294,6 +294,13 @@
         </div>
         
         <div class="yan-kutu">
+            <img src="hamburger.jpg" alt="Hamburger">
+            <img src="kalamar-tava-w1600.jpg" alt="Kalamar">
+            <img src="levrek.jpeg" alt="levrek">
+            <img src="kurtborek.jpg" alt="Borek">
+            <img src="menemen.jpeg" alt="Menemen">
+            <img src="kabaktatlısı.jpeg" alt="tatlı">
+            <img src="AfiyetOlsun.jpg" alt="mesaj">
             <img src="cay.jpeg" alt="İçecek 1">
             <img src="latte-small.jpg" alt="İçecek 2">
             <img src="limonata.jpeg" alt="İçecek 3">
@@ -306,8 +313,6 @@
             <img src="kunefe.jpg" alt="tatlı">
             <img src="dondurma.jpeg" alt="tatlı">
             <img src="cheescake.jpeg" alt="tatlı">
-            <img src="tercih.jpg" alt="mesaj">
-            <img src="AfiyetOlsun.jpg" alt="mesaj">
         </div>
     </div>
     
